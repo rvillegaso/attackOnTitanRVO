@@ -1,0 +1,1108 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/usuario/ontologies/2022/3/AtackOnTitan"
+     xml:base="http://www.semanticweb.org/usuario/ontologies/2022/3/AtackOnTitan"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:AttackOnTitan="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan/1.0.0"/>
+        <rdfs:comment xml:lang="en">Authors: Ricardo Villegas Ortiz</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#canBecomeHuman -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#canBecomeHuman">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#canTransformIntoTitan"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#nineTitans"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#character"/>
+        <rdfs:comment xml:lang="en">Property that defines if one of the nine titans can become human again</rdfs:comment>
+        <rdfs:label xml:lang="en">canbecomeHuman</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#canTransformIntoTitan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#canTransformIntoTitan">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#nineTitans"/>
+        <rdfs:comment xml:lang="en">This property defines if the character can transform into one of the nine titans</rdfs:comment>
+        <rdfs:label xml:lang="en">canTransformIntoTitan</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasBelievers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasBelievers">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasReligion"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#religion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#character"/>
+        <rdfs:comment xml:lang="en">Property that defines if a religion has believers</rdfs:comment>
+        <rdfs:label xml:lang="en">hasBelievers</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasMembers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasMembers">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasSocialClass"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#socialClass"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#character"/>
+        <rdfs:comment xml:lang="en">Property that defines if a social class has members</rdfs:comment>
+        <rdfs:label xml:lang="en">hasMembers</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasReligion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasReligion">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#religion"/>
+        <rdfs:comment xml:lang="en">Property that defines the religion of a character</rdfs:comment>
+        <rdfs:label xml:lang="en">hasReligion</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasSocialClass -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasSocialClass">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#socialClass"/>
+        <rdfs:comment xml:lang="en">Properties that defines the social class of a character</rdfs:comment>
+        <rdfs:label xml:lang="en">hasSocialCalss</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#canGoOutside -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#canGoOutside">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#military"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>property that determines if a military group can go outside</rdfs:comment>
+        <rdfs:label xml:lang="en">canGoOutside</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#canTransform -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#canTransform">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#titans"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Property that deternubes if a character can transform into a titan</rdfs:comment>
+        <rdfs:label xml:lang="en">canTransform</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasAbility -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasAbility">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#titans"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>property that determines if a titan has an special hability</rdfs:comment>
+        <rdfs:label xml:lang="en">hasAbility</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasHeight">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#constructions"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>property that  determines the height of a construction</rdfs:comment>
+        <rdfs:label xml:lang="en">hasHeight</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasPopulation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasPopulation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#regions"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>property that determines the number of population</rdfs:comment>
+        <rdfs:label xml:lang="en">hasPopulation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#isInTraining -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#isInTraining">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#military"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Propert that decides if a military is in training</rdfs:comment>
+        <rdfs:label xml:lang="en">isInTraining</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#abnormalTitans -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#abnormalTitans">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#titans"/>
+        <rdfs:comment xml:lang="en">Pure titans that display abnormal behavior or intelligence.</rdfs:comment>
+        <rdfs:label xml:lang="en">abnormalTitans</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#abnormalTitans"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#titans"/>
+        <rdfs:comment>titans</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#castle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#castle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#constructions"/>
+        <rdfs:comment xml:lang="en">A large building with big walls and towers.</rdfs:comment>
+        <rdfs:label xml:lang="en">castle</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#castle"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#constructions"/>
+        <rdfs:comment>Constructions</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#character -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#character">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasReligion"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#religion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasSocialClass"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#socialClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#canTransformIntoTitan"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#nineTitans"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Information about the characters</rdfs:comment>
+        <rdfs:label xml:lang="en">character</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#character"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasReligion"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#religion"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>hasReligion</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#character"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasSocialClass"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#socialClass"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>hasSocialClass</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#character"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#canTransformIntoTitan"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#nineTitans"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>CanTransform</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#cities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#cities">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#regions"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#towns"/>
+        <rdfs:comment xml:lang="en">Information about the cities</rdfs:comment>
+        <rdfs:label xml:lang="en">cities</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#cities"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#regions"/>
+        <rdfs:comment>cities</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#commoner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#commoner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#socialClass"/>
+        <rdfs:comment xml:lang="en">People that lives in the city and work as a merchant, shepherd, farmer...</rdfs:comment>
+        <rdfs:label xml:lang="en">commoner</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#commoner"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#socialClass"/>
+        <rdfs:comment>socialClass</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#constructions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#constructions">
+        <rdfs:comment xml:lang="en">Information about the diferent constructions</rdfs:comment>
+        <rdfs:label xml:lang="en">constructions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#houses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#houses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#constructions"/>
+        <rdfs:comment xml:lang="en">A building for human habitation, consists of a ground floow and one or more upper storeys.</rdfs:comment>
+        <rdfs:label xml:lang="en">houses</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#houses"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#constructions"/>
+        <rdfs:comment>Houses</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#king -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#king">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#socialClass"/>
+        <rdfs:comment xml:lang="en">Person who rules inside the walls</rdfs:comment>
+        <rdfs:label xml:lang="en">king</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#king"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#socialClass"/>
+        <rdfs:comment>socialClass</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#militar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#militar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#socialClass"/>
+        <rdfs:comment xml:lang="en">People that defends the population inside the walls and the king</rdfs:comment>
+        <rdfs:label xml:lang="en">military</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#militar"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#socialClass"/>
+        <rdfs:comment>socialClass</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#military -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#military">
+        <rdfs:comment xml:lang="en">Information about the three military branches</rdfs:comment>
+        <rdfs:label xml:lang="en">military</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#militaryPolice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#militaryPolice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#military"/>
+        <rdfs:comment xml:lang="en">Military force in charge of keeping order inside the walls.</rdfs:comment>
+        <rdfs:label xml:lang="en">militarypolice</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#militaryPolice"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#military"/>
+        <rdfs:comment>Military</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#nineTitans -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#nineTitans">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#titans"/>
+        <rdfs:comment xml:lang="en">The nine titans are humans who inherited the power of the titans, which enabled them to transform into their inherited titan at will. There are nine of them.</rdfs:comment>
+        <rdfs:label xml:lang="en">nineTitans</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#nineTitans"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#titans"/>
+        <rdfs:comment>titans</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#pureTitans -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#pureTitans">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#titans"/>
+        <rdfs:comment xml:lang="en">Ranging from 2 to 15m in height, these Titans compose the vast majority of Titans. They are mindless.</rdfs:comment>
+        <rdfs:label xml:lang="en">pureTitans</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#pureTitans"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#titans"/>
+        <rdfs:comment>titans</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#regions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#regions">
+        <rdfs:comment xml:lang="en">Information about the diferent regions</rdfs:comment>
+        <rdfs:label xml:lang="en">regions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#religion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#religion">
+        <rdfs:comment xml:lang="en">Information about the diferent religions</rdfs:comment>
+        <rdfs:label xml:lang="en">religion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#scoutingLegion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#scoutingLegion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#military"/>
+        <rdfs:comment xml:lang="en">Military group that attempt to reclaim the territory that has been lost to the Titans</rdfs:comment>
+        <rdfs:label xml:lang="en">scoutingLegion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#scoutingLegion"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#military"/>
+        <rdfs:comment>Military</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#socialClass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#socialClass"/>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#stationaryGuard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#stationaryGuard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#military"/>
+        <rdfs:comment xml:lang="en">Guards that protect the different walls from Paradise</rdfs:comment>
+        <rdfs:label xml:lang="en">stationariGuard</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#stationaryGuard"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#military"/>
+        <rdfs:comment>military</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#subjectsOfYmir -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#subjectsOfYmir">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#religion"/>
+        <rdfs:comment xml:lang="en">The followers of this religion preaches that they are the &apos;chosen children of God (Ymir)&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="en">subjectsOfYmir</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#subjectsOfYmir"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#religion"/>
+        <rdfs:comment>religion</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#theChurchOfTheWalls -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#theChurchOfTheWalls">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#religion"/>
+        <rdfs:comment xml:lang="en">Religious organization that considers the Walls to be sacred, with a low of power within them</rdfs:comment>
+        <rdfs:label xml:lang="en">theChurchOfTheWalls</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#theChurchOfTheWalls"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#religion"/>
+        <rdfs:comment>religion</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#titans -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#titans">
+        <rdfs:comment xml:lang="en">A specie of giant, man-eating humanoids.</rdfs:comment>
+        <rdfs:label xml:lang="en">titans</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#towns -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#towns">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#regions"/>
+        <rdfs:comment xml:lang="en">information about the towns</rdfs:comment>
+        <rdfs:label xml:lang="en">towns</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#towns"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#regions"/>
+        <rdfs:comment>towns</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#trainingCorps -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#trainingCorps">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#military"/>
+        <rdfs:comment xml:lang="en">This military branch is formed by cadets in trining</rdfs:comment>
+        <rdfs:label xml:lang="en">trainingCorps</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#trainingCorps"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#military"/>
+        <rdfs:comment>military</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#walls -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#walls">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#constructions"/>
+        <rdfs:comment xml:lang="en">Three large structures locates on Paradis Island that guard the remnants of Eldia</rdfs:comment>
+        <rdfs:label xml:lang="en">walls</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#walls"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#constructions"/>
+        <rdfs:comment>Walls</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#yeagerists -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#yeagerists">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#religion"/>
+        <rdfs:comment xml:lang="en">Rebel group that want to reunite Eren Yeager with his brother Zeke Yeager to create the &apos;New Eldian Empire&apos;</rdfs:comment>
+        <rdfs:label xml:lang="en">yaegerists</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#yeagerists"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#religion"/>
+        <rdfs:comment>religion</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#character1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#character1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#character"/>
+        <AttackOnTitan:canTransform rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</AttackOnTitan:canTransform>
+        <rdfs:comment xml:lang="en">Instance of a character class</rdfs:comment>
+        <rdfs:label xml:lang="en">character1</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/page/Character</rdfs:sameAs>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#character1"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#character"/>
+        <rdfs:comment>character1</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#military1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#military1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#scoutingLegion"/>
+        <AttackOnTitan:canGoOutside rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</AttackOnTitan:canGoOutside>
+        <AttackOnTitan:isInTraining rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</AttackOnTitan:isInTraining>
+        <rdfs:comment>Instance of military</rdfs:comment>
+        <rdfs:label xml:lang="en">military1</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/property/military</rdfs:sameAs>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#military1"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#scoutingLegion"/>
+        <rdfs:comment xml:lang="en">military1</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#region1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#region1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#cities"/>
+        <AttackOnTitan:hasPopulation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</AttackOnTitan:hasPopulation>
+        <rdfs:comment xml:lang="en">Instance of the Region class</rdfs:comment>
+        <rdfs:label xml:lang="en">region1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#religion1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#religion1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#yeagerists"/>
+        <rdfs:comment xml:lang="en">Instance of the class Religion</rdfs:comment>
+        <rdfs:label xml:lang="en">religion1</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/ontology/religion</rdfs:sameAs>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#religion1"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#yeagerists"/>
+        <rdfs:comment>religion1</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#socialClass -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#socialClass">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#militar"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#socialClass"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#militar"/>
+        <rdfs:comment>socialClass</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#titan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#titan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#titans"/>
+        <AttackOnTitan:hasAbility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</AttackOnTitan:hasAbility>
+        <rdfs:label xml:lang="en">titan</rdfs:label>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#titan"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#titans"/>
+        <rdfs:comment>titan</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#socialClass">
+        <rdfs:label xml:lang="en">socialClass</rdfs:label>
+        <rdfs:comment xml:lang="en">Instance of the socialClass class</rdfs:comment>
+        <rdfs:sameAs>https://dbpedia.org/page/Social_class</rdfs:sameAs>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#abnormalTitans"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#nineTitans"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#pureTitans"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#castle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#houses"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#walls"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#commoner"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#king"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#militar"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#militaryPolice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#scoutingLegion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#stationaryGuard"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#trainingCorps"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#subjectsOfYmir"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#theChurchOfTheWalls"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#yeagerists"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#w">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#u">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#canTransform"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#character"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#nineTitans"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#military"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#canGoOutside"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#scoutingLegion"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#isInTraining"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#military"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#trainingCorps"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#regions"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasPopulation"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#u"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#u"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#cities"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#regions"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                <swrl:arguments>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:resource="urn:swrl:var#u"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasPopulation"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#u"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#towns"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#titans"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#hasAbility"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/usuario/ontologies/2022/3/AttackOnTitan#nineTitans"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
